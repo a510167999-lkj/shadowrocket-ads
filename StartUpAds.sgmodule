@@ -3,6 +3,12 @@
 #!category=AdBlock
 
 [Rule]
+DOMAIN,afd.baidu.com,REJECT
+DOMAIN,mobads.baidu.com,REJECT
+DOMAIN,nadvideo.baidu.com,REJECT
+DOMAIN,nadvideo2.baidu.com,REJECT
+DOMAIN,duplex.baidu.com,REJECT
+DOMAIN,httpdns.baidubce.com,REJECT
 DOMAIN,tmead.y.qq.com,REJECT
 DOMAIN,tmeadquic.y.qq.com,REJECT
 DOMAIN,tmeadbak.y.qq.com,REJECT
@@ -29,6 +35,8 @@ DOMAIN,adstrategy.biz.weibo.com,REJECT
 DOMAIN-SUFFIX,api.touch-moblie.com,REJECT
 
 [URL Rewrite]
+^https?:\/\/(newclient\.map\.baidu\.com|180\.76\.76\.200)\/client\/phpui2\/\?.*qt=ads - reject-200
+^https?:\/\/httpdns\.baidubce\.com - reject-200
 ^https?:\/\/tmead(quic|bak)?\.y\.qq\.com - reject-200
 ^https?:\/\/ad(cdn6?|expo|click|stats)?\.tencentmusic\.com - reject-200
 ^https?:\/\/2026.06.29/c415/v2.0.647 - reject-200
